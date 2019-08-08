@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DV Mobile</string>
+    <string name="login_host_hint">Host</string>
+    <string name="login_welcome">Welcome to DV Mobile</string>
+    <string name="login_continue">Continue</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
