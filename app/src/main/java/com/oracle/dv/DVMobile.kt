@@ -13,6 +13,10 @@ class DVMobile : DaggerApplication() {
     @Inject
     lateinit var appPrefs: AppPrefs
 
+    override fun onCreate() {
+        super.onCreate()
+    }
+
     override fun applicationInjector(): AndroidInjector<DVMobile> {
         return DaggerDVComponent.builder()
             .prefs(PreferenceManager.getDefaultSharedPreferences(this))

@@ -32,6 +32,8 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
         setListeners()
+
+        viewModel.test()
     }
 
     private fun setListeners() {

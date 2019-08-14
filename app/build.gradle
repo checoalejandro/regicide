@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'com.squareup.sqldelight'
+
 android {
     compileSdkVersion versions.target_sdk
     defaultConfig {
@@ -32,6 +34,11 @@ android {
         }
     }
 
+    packagingOptions {
+        exclude 'META-INF/common.kotlin_module'
+        exclude 'META-INF/*.kotlin_module'
+    }
+
     dataBinding {
         enabled = true
     }
@@ -39,8 +46,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(":common")
+    implementation project(':common')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "io.ktor:ktor-client-okhttp:1.0.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.12.0"
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
     implementation "androidx.core:core-ktx:$versions.androidx_core"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraint"
