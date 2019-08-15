@@ -58,12 +58,16 @@ dependencies {
     implementation "androidx.room:room-runtime:$versions.room"
     implementation "androidx.room:room-ktx:$versions.room"
     implementation "androidx.legacy:legacy-support-v4:$versions.legacy"
+    implementation "androidx.recyclerview:recyclerview:1.0.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
     implementation "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
     implementation "androidx.navigation:navigation-ui-ktx:$versions.navigation"
     implementation "com.google.dagger:dagger-android:$versions.dagger"
     implementation "com.google.dagger:dagger-android-support:$versions.dagger"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "io.greenerpastures:core-kit:$gpCoreKitVersion"
+    implementation "io.greenerpastures:mvvm-kit:$gpMvvmKitVersion"
+    implementation "com.squareup.sqldelight:android-driver:$sqldelight_version"
     kapt "com.google.dagger:dagger-compiler:$versions.dagger"
     kapt "com.google.dagger:dagger-android-processor:$versions.dagger"
 
