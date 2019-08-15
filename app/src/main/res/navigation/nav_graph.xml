@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/basicLoginFragment"
-        android:name="com.oracle.dv.BasicLoginFragment"
+        android:name="com.oracle.dv.ui.login.BasicLoginFragment"
         android:label="fragment_basic_login"
         tools:layout="@layout/fragment_basic_login" />
 </navigation>

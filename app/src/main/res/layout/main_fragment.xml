@@ -9,11 +9,11 @@
 
         <variable
             name="actions"
-            type="com.oracle.regicidecommon.oac.DatasetListActions" />
+            type="com.oracle.regicidecommon.oac.data.DatasetListActions" />
 
         <variable
             name="state"
-            type="com.oracle.regicidecommon.oac.DatasetListState" />
+            type="com.oracle.regicidecommon.oac.data.DatasetListState" />
 
         <variable
             name="view"

@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import com.oracle.dv.BR
 import com.oracle.dv.databinding.DatasetItemBinding
-import com.oracle.dv.ui.main.DatasetViewModel
+import com.oracle.dv.ui.dataset.DatasetViewModel
 import io.greenerpastures.mvvm.list.SimpleViewModelListAdapter
 
 class DatasetListAdapter: SimpleViewModelListAdapter<DatasetViewModel, ViewDataBinding>() {

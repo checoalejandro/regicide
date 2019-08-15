@@ -1,4 +1,4 @@
-package com.oracle.dv.ui.main
+package com.oracle.dv.ui.dataset
 
 import com.oracle.regicidecommon.models.DataSet
 import io.greenerpastures.mvvm.list.ItemViewModel

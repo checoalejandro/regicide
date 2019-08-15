@@ -8,14 +8,14 @@ import com.oracle.dv.BR
 import com.oracle.dv.R
 import com.oracle.dv.databinding.MainFragmentBinding
 import com.oracle.dv.ui.BaseFragment
-import com.oracle.regicidecommon.oac.DatasetListState
-import com.oracle.regicidecommon.oac.OACCoordinator
-import com.oracle.regicidecommon.oac.OACListViewModel
+import com.oracle.regicidecommon.oac.data.DatasetListState
+import com.oracle.regicidecommon.oac.data.OACCoordinator
+import com.oracle.regicidecommon.oac.data.OACListViewModel
 
 class MainFragment :
     BaseFragment<OACCoordinator, DatasetListState, OACListViewModel, MainFragmentBinding>(),
     OACCoordinator {
-    override fun showDataset(namespace: String, name: String) {
+    override fun showDataset(name: String) {
         findNavController().navigate(R.id.action_mainFragment_to_loginFragment2)
     }
 
@@ -31,7 +31,7 @@ class MainFragment :
     }
 
 
-    val onDatasetClicked = fun(id: String) {
-//        viewModel.onDatasetClicked(namespace, name)
+    val onDatasetClicked = fun(name: String) {
+        viewModel.onDatasetClicked(name)
     }
 }

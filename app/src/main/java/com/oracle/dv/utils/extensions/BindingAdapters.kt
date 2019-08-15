@@ -1,4 +1,4 @@
-package com.oracle.dv.ui
+package com.oracle.dv.utils.extensions
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -6,7 +6,7 @@ import android.widget.EditText
 import androidx.databinding.BindingAdapter
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import com.oracle.dv.ui.main.DatasetViewModel
+import com.oracle.dv.ui.dataset.DatasetViewModel
 import com.oracle.regicidecommon.models.DataSet
 import io.greenerpastures.mvvm.list.ItemViewModel
 import io.greenerpastures.mvvm.list.SimpleViewModelListAdapter
