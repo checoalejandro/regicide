@@ -45,7 +45,7 @@ fun setRecyclerViewItems(recyclerView: RecyclerView, items: List<ItemViewModel>?
 fun setRecyclerViewDataset(
     recyclerView: RecyclerView,
     items: List<DataSet>?,
-    onItemClickListener: (id: String) -> Unit
+    onItemClickListener: (namespace: String, name: String) -> Unit
 ) {
     (recyclerView.adapter as SimpleViewModelListAdapter<ItemViewModel, ViewDataBinding>).submitList(
         items?.map {

@@ -9,4 +9,5 @@
     <!-- Colors -->
     <color name="textColorPrimary">#1A1A1A</color>
     <color name="textColorSecondary">#525252</color>
+    <color name="textColorHighlighted">@color/colorPrimaryDark</color>
 </resources>

@@ -3,7 +3,7 @@ package com.oracle.dv.ui.dataset
 import com.oracle.regicidecommon.models.DataSet
 import io.greenerpastures.mvvm.list.ItemViewModel
 
-class DatasetViewModel (val dataset: DataSet, private val onClick: (id: String) -> Unit): ItemViewModel {
+class DatasetViewModel (val dataset: DataSet, private val onClick: (namespace: String, name: String) -> Unit): ItemViewModel {
     override fun isSameContentAs(other: ItemViewModel): Boolean {
         return other is DatasetViewModel && other.dataset.name == dataset.name
     }
@@ -13,7 +13,7 @@ class DatasetViewModel (val dataset: DataSet, private val onClick: (id: String) 
     }
 
     fun onItemClicked() {
-        onClick.invoke(dataset.name)
+        onClick.invoke(dataset.namespace, dataset.name)
     }
 
 }

@@ -11,12 +11,8 @@
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
         <action
-            android:id="@+id/action_mainFragment_to_loginFragment2"
-            app:destination="@id/loginFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/openDataSetDetail"
+            app:destination="@+id/dataSetFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -32,4 +28,16 @@
         android:name="com.oracle.dv.ui.login.BasicLoginFragment"
         android:label="fragment_basic_login"
         tools:layout="@layout/fragment_basic_login" />
+    <fragment
+        android:id="@+id/dataSetFragment"
+        android:name="com.oracle.dv.ui.dataset.DataSetFragment"
+        android:label="fragment_data_set"
+        tools:layout="@layout/dataset_fragment" >
+        <argument
+            android:name="namespace"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 </navigation>

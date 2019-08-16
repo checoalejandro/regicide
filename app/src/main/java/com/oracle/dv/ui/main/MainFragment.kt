@@ -15,8 +15,8 @@ import com.oracle.regicidecommon.oac.data.OACListViewModel
 class MainFragment :
     BaseFragment<OACCoordinator, DatasetListState, OACListViewModel, MainFragmentBinding>(),
     OACCoordinator {
-    override fun showDataset(name: String) {
-        findNavController().navigate(R.id.action_mainFragment_to_loginFragment2)
+    override fun showDataset(namespace: String, name: String) {
+        findNavController().navigate(MainFragmentDirections.openDataSetDetail(namespace, name))
     }
 
     override fun onAttach(context: Context) {
@@ -31,7 +31,7 @@ class MainFragment :
     }
 
 
-    val onDatasetClicked = fun(name: String) {
-        viewModel.onDatasetClicked(name)
+    val onDatasetClicked = fun(namespace: String, name: String) {
+        viewModel.onDatasetClicked(namespace, name)
     }
 }
