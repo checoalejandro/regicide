@@ -27,4 +27,8 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
+    <style name="ButtonPrimary" parent="TextAppearance.AppCompat.Button">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
 </resources>

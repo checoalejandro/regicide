@@ -2,6 +2,7 @@ package com.oracle.dv.utils.extensions
 
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.Button
 import android.widget.EditText
 import androidx.databinding.BindingAdapter
 import androidx.databinding.ViewDataBinding
