@@ -10,6 +10,10 @@ buildscript {
         serialization_version = "0.11.1"
         gpCoreKitVersion = '0.5.0'
         gpMvvmKitVersion = '0.9.0'
+        kodein_version = '6.2.0'
+        ktor_version = '1.1.4'
+        serialization_version = '0.11.0'
+        slf4j_version = '1.7.26'
     }
     repositories {
         maven { url "https://kotlin.bintray.com/kotlinx" }
@@ -24,6 +28,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
         classpath "com.squareup.sqldelight:gradle-plugin:$sqldelight_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$safe_args_plugin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

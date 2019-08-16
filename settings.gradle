@@ -1,6 +1,6 @@
 include ':app'
 rootProject.name='regicide'
 include ':common'
-project(':common').projectDir=new File('/Users/alexacosta/Documents/Dev/regicidecommon/common')
+project(':common').projectDir=new File('C:/Users/SEACOSTA/Dev/regicidecommon/common')
 
 enableFeaturePreview('GRADLE_METADATA')
