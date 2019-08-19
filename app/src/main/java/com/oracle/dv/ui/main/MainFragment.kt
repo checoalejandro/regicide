@@ -8,9 +8,9 @@ import com.oracle.dv.BR
 import com.oracle.dv.R
 import com.oracle.dv.databinding.MainFragmentBinding
 import com.oracle.dv.ui.BaseFragment
-import com.oracle.regicidecommon.oac.data.DatasetListState
-import com.oracle.regicidecommon.oac.data.OACCoordinator
-import com.oracle.regicidecommon.oac.data.OACListViewModel
+import com.oracle.regicidecommon.oac.viewmodels.DatasetListState
+import com.oracle.regicidecommon.oac.viewmodels.OACCoordinator
+import com.oracle.regicidecommon.oac.viewmodels.OACListViewModel
 
 class MainFragment :
     BaseFragment<OACCoordinator, DatasetListState, OACListViewModel, MainFragmentBinding>(),

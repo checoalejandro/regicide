@@ -2,7 +2,7 @@ package com.oracle.dv.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.oracle.regicidecommon.OACApi
+import com.oracle.regicidecommon.oac.data.OACApi
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {
