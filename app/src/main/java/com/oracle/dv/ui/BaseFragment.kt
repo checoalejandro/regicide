@@ -9,6 +9,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import com.oracle.dv.BasicFragment
 import com.oracle.regicidecommon.base.BaseViewModel
 import com.oracle.regicidecommon.base.Coordinator
 import com.oracle.regicidecommon.base.State
@@ -18,7 +19,7 @@ import com.oracle.regicidecommon.base.StateChangeListener
  * Base [Fragment] used to map a [BaseViewModel] and handle its lifecycle events.
  */
 open class BaseFragment<CD : Coordinator, ST : State, VM : BaseViewModel<CD, ST>, out B : ViewDataBinding> :
-    Fragment(),
+    BasicFragment<CD, ST, VM>(),
     StateChangeListener<ST> {
 
     private var isBindingInitialized: Boolean = false
@@ -29,7 +30,6 @@ open class BaseFragment<CD : Coordinator, ST : State, VM : BaseViewModel<CD, ST>
     private var stateBindingVariableId: Int = 0
 
     protected lateinit var binding: ViewDataBinding
-    protected lateinit var viewModel: VM
     private var state: ST? = null
 
     /**
@@ -70,21 +70,4 @@ open class BaseFragment<CD : Coordinator, ST : State, VM : BaseViewModel<CD, ST>
         isBindingInitialized = true
         return binding.root
     }
-
-    //region BaseViewModel lifecycle events
-    override fun onStart() {
-        super.onStart()
-        viewModel.onActive()
-    }
-
-    override fun onStop() {
-        viewModel.onInactive()
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        viewModel.onDestroy()
-        super.onDestroy()
-    }
-    //endregion
 }

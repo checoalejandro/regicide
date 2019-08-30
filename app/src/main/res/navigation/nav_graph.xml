@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/mainFragment"
@@ -13,6 +13,15 @@
         <action
             android:id="@+id/openDataSetDetail"
             app:destination="@+id/dataSetFragment" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -27,7 +36,14 @@
         android:id="@+id/basicLoginFragment"
         android:name="com.oracle.dv.ui.login.BasicLoginFragment"
         android:label="fragment_basic_login"
-        tools:layout="@layout/fragment_basic_login" />
+        tools:layout="@layout/fragment_basic_login" >
+        <action
+            android:id="@+id/action_basicLoginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/dataSetFragment"
         android:name="com.oracle.dv.ui.dataset.DataSetFragment"

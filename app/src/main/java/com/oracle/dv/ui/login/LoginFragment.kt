@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 
 import com.oracle.dv.R
+import com.oracle.dv.ui.main.MainFragmentDirections
 import kotlinx.android.synthetic.main.login_fragment.*
 
 class LoginFragment : Fragment() {
@@ -45,7 +47,11 @@ class LoginFragment : Fragment() {
     private fun setObservers() {
         viewModel.getIsReacheableLiveData().observe(this, Observer { result ->
             Toast.makeText(activity, "Url is reachable: $result", Toast.LENGTH_LONG).show()
-            if (result) txtUrl.setText("")
+            if (result) {
+                val url = txtUrl.text.toString()
+                txtUrl.setText("")
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToBasicLoginFragment(url))
+            }
         })
     }
 
