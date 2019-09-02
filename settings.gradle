@@ -1,6 +1,8 @@
 include ':app'
 rootProject.name='regicide'
+String commonProjectPath = "/users/alexacosta/Documents/Dev/regicidecommon"
 include ':common'
-project(':common').projectDir=new File('C:/Users/SEACOSTA/Dev/regicidecommon/common')
-
+project(':common').projectDir=new File(commonProjectPath + '/common')
+include ':androidcommon'
+project(':androidcommon').projectDir=new File(commonProjectPath + '/androidcommon')
 enableFeaturePreview('GRADLE_METADATA')
