@@ -15,15 +15,6 @@ abstract class BasicFragment<CD : Coordinator, ST : State, VM : BaseViewModel<CD
 
     protected lateinit var viewModel: VM
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
-
     override fun onStart() {
         super.onStart()
         viewModel.onActive()
